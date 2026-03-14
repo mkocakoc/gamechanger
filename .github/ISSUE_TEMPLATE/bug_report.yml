@@ -1,0 +1,64 @@
+name: Bug Report
+description: Report a reproducible bug in GameChanger
+title: "bug: <short summary>"
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please provide clear reproduction details.
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Example: 0.5.0
+      placeholder: 0.5.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Windows version
+      options:
+        - Windows 10
+        - Windows 11
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: CPU, RAM, GPU, disk type
+      placeholder: i7-7700K, 16GB, GTX 1070, HDD
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open GameChanger
+        2. Click profile CS2_HDD
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics (optional)
+      description: Attach diagnostics JSON and relevant logs from %APPDATA%/GameChanger
+      render: shell
